@@ -32,6 +32,27 @@ cd learning-rust
 cargo run
 ```
 
+## 📚 Learned
+
+- [Primitive types](https://doc.rust-lang.org/std/index.html#primitives)
+  - Boolean (bool)
+  - Integer (i8, i16...)
+    - Start counting negative numbers (-128...127)
+  - Unsigned Integer (u8, u16...)
+    - Start counting by 0 (0...255)
+  - Char
+- [Variables](https://doc.rust-lang.org/std/keyword.let.html) (constants and statics)
+  - In Rust, variables are immutable by default
+    - change this by using `mut` like `let mut var...`
+  - [Constants](https://doc.rust-lang.org/std/keyword.const.html) are inlined (what does it mean?)
+    - All values, parameters assigned with the value of a constant are replaced in compilation time
+  - Use `static` keyword to create GLOBAL variables similar to constants
+    - [Static](https://doc.rust-lang.org/std/keyword.static.html) values can be mutable (but it is not memory safe)
+  - Scopes exist, like in other languages
+
+See this [code](https://github.com/kauefraga/learning-rust/blob/main/src/main.rs)
+
+
 ## 💻 Technologies
 
 - 🦀 [Rust](https://rust-lang.org)
