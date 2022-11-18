@@ -44,11 +44,19 @@ cargo run
 - [Variables](https://doc.rust-lang.org/std/keyword.let.html) (constants and statics)
   - In Rust, variables are immutable by default
     - change this by using `mut` like `let mut var...`
-  - [Constants](https://doc.rust-lang.org/std/keyword.const.html) are inlined (what does it mean?)
+  - [Constants](https://doc.rust-lang.org/std/keyword.const.html) are *inlined* (what does it mean?)
+    - Don't have space on the stack (memory allocation)
     - All values, parameters assigned with the value of a constant are replaced in compilation time
   - Use `static` keyword to create GLOBAL variables similar to constants
     - [Static](https://doc.rust-lang.org/std/keyword.static.html) values can be mutable (but it is not memory safe)
+    - Have memory allocation
   - Scopes exist, like in other languages
+    - Anonymous scope
+    - *Shadowing*
+- Functions
+  - Should return something
+    - Omit `;` and this expression must be returned
+    - Also can use `return` keyword
 
 See this [code](https://github.com/kauefraga/learning-rust/blob/main/src/main.rs)
 
