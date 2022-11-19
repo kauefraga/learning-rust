@@ -53,13 +53,24 @@ cargo run
   - Scopes exist, like in other languages
     - Anonymous scope
     - *Shadowing*
-- Functions
+- [Conditional `if`](https://doc.rust-lang.org/std/keyword.if.html)
+  - As simple as in other languages `if condition {} else if condition {} else {}`
+  - In Rust most parts are expression, with `if` it's not different
+    - You can use like `let condition = if condition {} else {};`
+  - [Match statement](https://doc.rust-lang.org/std/keyword.match.html)
+    - It is a expression (`let x = match condition {};`)
+    - Cover default behavior with `_ => something`;
+- [Functions](https://doc.rust-lang.org/std/keyword.fn.html)
   - Should return something
     - Omit `;` and this expression must be returned
     - Also can use `return` keyword
+- Iterations
+  - Rust has [`while`](https://doc.rust-lang.org/std/keyword.while.html), [`loop`](https://doc.rust-lang.org/std/keyword.loop.html) and [`for`](https://doc.rust-lang.org/std/keyword.for.html)
+  - `loop` is infinite so, if you want to break it, use `break` keyword
+  - In Rust, `for` is like forEach in other languages
+    - work with ranges `for i in 1..11` or `for i in 1..=10`
 
 See this [code](https://github.com/kauefraga/learning-rust/blob/main/src/main.rs)
-
 
 ## 💻 Technologies
 
