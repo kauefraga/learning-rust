@@ -72,6 +72,47 @@ fn loops() {
   }
 }
 
+fn ownership() {
+  // Static string = &static str
+  // let static_string = "static Kaue";
+
+  // Dynamic string
+  let mut string = String::from("Kaue"); // Allocate pointer to string in stack and initialize the string in heap
+
+  stole(&mut string);
+
+  println!("{}", string);
+}
+
+fn stole(string: &mut String) {
+  string.push_str(" Fraga");
+  println!("{}", string);
+}
+
+fn pattern_matching() {
+  for x in 1..=20 {
+    println!("{}: {}", x, match x {
+      1 => "Pouco",
+      2 | 3 => "Um pouquinho",
+      4..=10 => "Um bocado",
+      _ if x % 2 == 0 => "Uma boa quantidade",
+      _ => "Muito",
+    })
+  }
+}
+
+fn error() {
+  match result() {
+    Ok(s) => println!("String de sucesso = {}", s),
+    Err(number) => println!("Código de erro = {}", number),
+  }
+  // let v = vec![1, 2, 3];
+}
+
+fn result() -> Result<String, u8> {
+  Ok(String::from("Tudo deu certo"))
+}
+
 fn main() {
   println!("PI = {}", PI);
 
@@ -101,4 +142,10 @@ fn main() {
   conditions(age);
 
   loops();
+
+  ownership();
+
+  pattern_matching();
+
+  error();
 }
