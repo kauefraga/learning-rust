@@ -69,6 +69,16 @@ cargo run
   - `loop` is infinite so, if you want to break it, use `break` keyword
   - In Rust, `for` is like forEach in other languages
     - work with ranges `for i in 1..11` or `for i in 1..=10`
+- Ownership
+  - Borrowing
+  - References
+- Pattern Matching
+- Error handling
+  - `Panic!`
+  - `Result<>`
+    - `Ok()`
+    - `Err()`
+
 
 See this [code](https://github.com/kauefraga/learning-rust/blob/main/src/main.rs)
 
