@@ -78,7 +78,9 @@ cargo run
   - `Result<>`
     - `Ok()`
     - `Err()`
-
+- Arrays
+  - indexes of type `usize`
+  - always static values
 
 See this [code](https://github.com/kauefraga/learning-rust/blob/main/src/main.rs)
 
