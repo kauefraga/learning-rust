@@ -1,3 +1,5 @@
+use learning_rust::{fs, os};
+
 const PI:f32 = 3.1415;
 static mut GLOBAL:u8 = 1;
 
@@ -113,6 +115,24 @@ fn result() -> Result<String, u8> {
   Ok(String::from("Tudo deu certo"))
 }
 
+fn file_system() {
+  let path = "./test.json";
+
+  match fs::is_file(path) {
+    true => {
+      let file = fs::read_file(path)
+        .expect("Should be able to read the file");
+
+      println!("the file text is {}", file);
+    },
+    _ => println!("Nothing for you!")
+  }
+}
+
+fn os_monitor() {
+  os::get_ram();
+}
+
 fn main() {
   println!("PI = {}", PI);
 
@@ -148,4 +168,8 @@ fn main() {
   pattern_matching();
 
   error();
+
+  file_system();
+
+  os_monitor();
 }
